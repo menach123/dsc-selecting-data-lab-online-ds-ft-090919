@@ -22,10 +22,7 @@ Don't forget to instantiate a cursor so that you can later execute your queries.
 
 
 ```python
-import sqlite3
-conn = sqlite3.connect('planets.db')
-cur = conn.cursor()
-import pandas as pd
+# Your code here
 ```
 
 ## Selecting Data
@@ -49,8 +46,7 @@ Write SQL queries for each of the statements below using the same pandas wrappin
 
 
 ```python
-cur.execute("""SELECT name, color FROM planets;""")
-pd.DataFrame(cur.fetchall(), columns=['name', 'color'])
+# Your code here
 ```
 
 
@@ -130,8 +126,7 @@ pd.DataFrame(cur.fetchall(), columns=['name', 'color'])
 
 
 ```python
-cur.execute("""SELECT * FROM planets WHERE mass > 1;""")
-pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
+# Your code here
 ```
 
 
@@ -210,8 +205,7 @@ pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
 
 
 ```python
-cur.execute("""SELECT name, mass FROM planets WHERE mass <= 1;""")
-pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
+# Your code here
 ```
 
 
@@ -270,8 +264,7 @@ pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
 
 
 ```python
-cur.execute("""SELECT name, color FROM planets WHERE num_of_moons > 10;""")
-pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
+# Your code here
 ```
 
 
@@ -330,8 +323,7 @@ pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
 
 
 ```python
-cur.execute("""SELECT * FROM planets WHERE num_of_moons > 0 and mass < 1;""")
-pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
+# Your code here
 ```
 
 
@@ -383,8 +375,7 @@ pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
 
 
 ```python
-cur.execute("""SELECT name, color FROM planets WHERE color LIKE '%blue%' ;""")
-pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
+# Your code here
 ```
 
 
@@ -438,8 +429,7 @@ pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
 
 
 ```python
-cur.execute("""SELECT name, Color, num_of_moons from planets WHERE rings = 0 """)
-pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
+# Your code here
 ```
 
 
@@ -471,33 +461,27 @@ pd.DataFrame(cur.fetchall(), columns = [x[0] for x in cur.description])
   <tbody>
     <tr>
       <th>0</th>
-      <td>Mercury</td>
-      <td>gray</td>
-      <td>0</td>
+      <td>Jupiter</td>
+      <td>orange</td>
+      <td>68</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Venus</td>
-      <td>yellow</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
       <td>Earth</td>
       <td>blue</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>Mars</td>
-      <td>red</td>
-      <td>2</td>
+      <th>2</th>
+      <td>Venus</td>
+      <td>yellow</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>Jupiter</td>
-      <td>orange</td>
-      <td>68</td>
+      <th>3</th>
+      <td>Mercury</td>
+      <td>gray</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
